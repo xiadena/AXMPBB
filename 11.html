@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>项目时间表</title>
+  <style>
+    /* 容器样式：居中 + 宽适配 */
+    .project-table-container {
+      width: 80%;
+      margin: 40px auto;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+
+    /* 表格核心：分离边框 + 斑马纹 + hover 高亮 */
+    .project-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* 表头：渐变背景 + 文字强调 */
+    .project-table thead {
+      background: linear-gradient(120deg, #f0f4f8, #e9f1f7);
+    }
+
+    .project-table th {
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 2px solid #ddd;
+    }
+
+    /* 单元格：间距控制 + 响应式换行 */
+    .project-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f2f2f2;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+
+    /* 斑马纹：增强可读性 */
+    .project-table tbody tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    /* 交互：hover 行高亮 + 动画过渡 */
+    .project-table tbody tr:hover {
+      background-color: #f5faff;
+      transform: translateX(2px);
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    /* 状态标签（如 TGE）：自定义样式 */
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #fff;
+      background-color: #409eff;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="project-table-container">
+    <table class="project-table">
+      <thead>
+        <tr>
+          <th>上线时间</th>
+          <th>项目名称</th>
+          <th>领取时间</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>7月22日</td>
+          <td>ZKWASM</td>
+          <td>7月22日 16:00 - 18:00</td>
+          <td><span class="badge">TGE</span></td>
+
+        </tr>
+        <tr>
+          <td>7月22日</td>
+          <td>YALA</td>
+          <td><span class="badge" style="background:#ff9900;">未公布</span></td>
+		  <td></td>
+        </tr>
+        <tr>
+          <td>7月23日</td>
+          <td>COA</td>
+          <td><span class="badge" style="background:#ff9900;">未公布</span></td>
+		  <td></td>
+        </tr>
+        <tr>
+          <td>7月24日</td>
+          <td>ASP</td>
+          <td><span class="badge" style="background:#ff9900;">未公布</span></td>
+		  <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
